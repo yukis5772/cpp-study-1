@@ -2,15 +2,29 @@
 #include <string>
 using namespace std;
 
+class Neko
+{
+private:
+  string name;
+
+public:
+  Neko(string s)
+  {
+    name = s;
+  }
+  void naku()
+  {
+    cout << "nya.oresamaha " << name << " da." << endl;
+  }
+};
+
 int main()
 {
-  string name;
-  int tosi;
-
-  cout << "hello,I'm computar." << endl;
-  cout << "please input your name." << endl;
-  cin >> name;
-  cout << name << ",nice to meet you." << endl;
-  cout << "by the way," << name << ",how old are you?" << endl;
-  cin >> tosi;
+  string s;
+  cout << "doraneko wo seisei simasu.namae wo nyuryoku site kudasai." << endl;
+  cin >> s;
+  Neko dora(s);
+  cout << "anatano naduketa neko ga memorijo ni seisei saremasita" << endl;
+  cout << "neko ga naki masu" << endl;
+  dora.naku();
 }
