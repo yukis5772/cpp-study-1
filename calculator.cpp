@@ -1,13 +1,16 @@
-#include <stdio.h>
+#include <iostream>
+#include <cstdio>
+using namespace std;
 main()
 {
     double a, b, ans;
     char op;
 
-    printf("加減乗除(+,-,*,/)ができます。指定例:2+5、終了時はq\n");
+    cout << "kagenjoujo(+,-,*,/)ga dekimasu.siteirei:2+5.shuryoji ha q\n"
+         << endl;
     while (1)
     {
-        printf("ready : ");
+        cout << "ready : " << endl;
         if (scanf("%lf %c %lf", &a, &op, &b) != 3)
             break;
         switch (op)
@@ -24,16 +27,18 @@ main()
         case '/':
             if (b == 0.0)
             {
-                printf("Error!(ゼロでの割算はできません)\n");
+                cout << "Error!(zero deno warizan ha dekimasen\n)" << endl;
                 continue;
             }
             ans = a / b;
             break;
         default:
-            printf("Error!(演算記号の指定が誤りです)\n");
+            cout << "Error!(enzankigo no sitei ga ayamari desu\n)" << endl;
             continue;
         }
-        printf("--> %g\n", ans);
+        cout << "--> %g\n"
+             << ans << endl;
     }
-    printf(".... Power OFF\n");
+    cout << ".... Power OFF\n"
+         << endl;
 }
