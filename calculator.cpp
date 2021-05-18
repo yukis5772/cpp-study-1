@@ -1,16 +1,13 @@
-#include <iostream>
 #include <cstdio>
-using namespace std;
 main()
 {
     double a, b, ans;
     char op;
 
-    cout << "kagenjoujo(+,-,*,/)ga dekimasu.siteirei:2+5.shuryoji ha q\n"
-         << endl;
+    printf("kagenjoujo(+,-,*,/)ga dekimasu.siteirei:2+5.shuryoji ha q\n");
     while (1)
     {
-        cout << "ready : " << endl;
+        printf("ready : ");
         if (scanf("%lf %c %lf", &a, &op, &b) != 3)
             break;
         switch (op)
@@ -27,18 +24,16 @@ main()
         case '/':
             if (b == 0.0)
             {
-                cout << "Error!(zero deno warizan ha dekimasen\n)" << endl;
+                printf("Error!(zero deno warizan ha dekimasen\n)");
                 continue;
             }
             ans = a / b;
             break;
         default:
-            cout << "Error!(enzankigo no sitei ga ayamari desu\n)" << endl;
+            printf("Error!(enzankigo no sitei ga ayamari desu\n)");
             continue;
         }
-        cout << "--> %g\n"
-             << ans << endl;
+        printf("--> %g\n", ans);
     }
-    cout << ".... Power OFF\n"
-         << endl;
+    printf(".... Power OFF\n");
 }
